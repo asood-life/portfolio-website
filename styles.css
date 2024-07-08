@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Roboto:wght@100;300;400&display=swap');
+
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    overflow-x: hidden;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+    line-height: 1.5;
+    animation: display-effect 1.2s ease-in;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes fade-in-effect {
+
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fade-up-effect {
+
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes display-effect {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes display-effect-bg {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.08;
+    }
+}
+
+#website-background {
+    position: fixed;
+    bottom: 0;
+    animation: display-effect-bg 1.2s ease-in;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+#nav-container {
+    position: fixed;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    left: 0;
+    animation: fade-in-effect 1s ease;
+    z-index: 1;
+}
+
+#nav-container-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    color: black;
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 0 10px;
+    animation: slide-in 0.5s ease forwards;
+    margin: 0.5rem 0.5rem;
+    font-size: 1rem;
+}
+
+.navbar-link:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-link:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+#resume-btn {
+    border: 1px solid black;
+    padding: 0.5rem;
+    background-color: white;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+#resume-btn:hover {
+    background-color: black;
+    color: white;
+    transition: 0.6s ease;
+}
+
+/* About Me and Skills section */
+
+.about-me-container {
+    height: 100%;
+    text-align: center;
+}
+
+/* Main Page Left Section CSS */
+
+.left-section:not(.left-section-background) {
+    position: fixed;
+    left: 0;
+    animation: fade-up-effect 2s ease-out;
+    bottom: 0;
+}
+
+.left-section-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: grayscale(100%);
+    height: 100%;
+    animation: none;
+    opacity: 0.1;
+}
+
+.right-section-background {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    filter: grayscale(100%);
+    width: 8rem;
+    animation: none;
+    opacity: 0.1;
+}
+
+.center-section-background {
+    filter: grayscale(100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0.06;
+}
+
+.left-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.left-section-container .row {
+    margin: 1.2rem;
+}
+
+.left-section-container .row a {
+    color: black;
+}
+
+.left-section-container .row i {
+    font-size: 150%;
+}
+
+.left-section-container .row i:hover {
+    transform: scale(1.5);
+    transition: 0.8s ease;
+}
+
+.left-section-vertical-line-container {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.left-section-vertical-line {
+    border-left: 6px solid black;
+    height: 100px;
+}
+
+/* Main Page Center Section CSS */
+
+/* .center-section-container {
+    animation: display-effect 3s ease-in;
+} */
+
+.center-section-name {
+    font-size: 6.2rem;
+    font-family: "Caveat", cursive;
+    margin-top: 10%;
+}
+
+.typewrite-container {
+    margin: 1.1rem auto;
+}
+
+.typewrite-container a {
+    list-style: none;
+}
+
+.typewrite {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.center-section-text {
+    /* text-align: center; */
+    margin-bottom: 2.2rem;
+    font-size: 1rem;
+}
+
+.center-section-skills {
+    text-align: center;
+}
+
+.center-section-skills div {
+    display: inline-block;
+}
+
+.center-section-skills .skill-icon {
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+}
+
+.center-section-skills .skill-icon img {
+    margin-bottom: 0.5rem;
+    width: 3.3rem;
+    filter: grayscale(100%);
+}
+
+.center-section-skills .skill-icon img:hover {
+    filter: grayscale(0%);
+    transition: 0.4s ease;
+}
+
+/* Main Page Right Section CSS */
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    animation: fade-in-effect 2s ease-in-out;
+    right: 0;
+    top: 0;
+}
+
+.right-section-mail {
+    writing-mode: vertical-lr;
+    margin: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+.right-section-vertical-line {
+    border-left: 6px solid black;
+    height: 150px;
+}
+
+/* Expereince Page */
+
+.experience-container {
+    height: 100%;
+}
+
+.timeline {
+    margin: 2rem auto;
+    list-style-type: none;
+    position: relative;
+}
+
+.timeline:before {
+    background-color: black;
+    content: '';
+    margin-left: -1px;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 2px;
+    height: 100%;
+}
+
+.timeline-event {
+    position: relative;
+}
+
+.timeline-event-main {
+    padding: 2em;
+    position: relative;
+    top: -1.875em;
+    left: 4rem;
+    width: 100%;
+}
+
+.timeline-event-main h3 {
+    font-size: 1.6rem;
+}
+
+.timeline-event-main h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.timeline-event-main strong {
+    font-weight: 700;
+}
+
+.timeline-event-main p:not(.timeline-event-thumbnail) {
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.timeline-event-main li{
+    margin-bottom: 1rem;
+}
+
+.timeline-event-icon {
+    display: block;
+    margin: 0.5em 0.5em 0.5em -0.5em;
+    position: absolute;
+    width: 5.6rem;
+    top: 0em;
+    filter: grayscale(100%);
+    left: 0.2em;
+}
+
+.timeline-event-icon:hover {
+    filter: grayscale(0%);
+    transition: 0.6s ease;
+}
+
+.timeline-event-thumbnail {
+    color: white;
+    font-size: 0.72rem;
+    background-color: black;
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    padding: 0.25em 1em 0.2em 1em;
+}
+
+.timeline-event-main .skill-badge {
+    border: 1px solid black;
+    color: black;
+}
+
+.section-heading h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 26px;
+    letter-spacing: 1px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 16px 0;
+    grid-gap: 22px;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+}
+
+.section-heading h1:after,
+.section-heading h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 2px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+/* Project Page */
+
+.project-container {
+    margin-top: 2rem;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.64);
+    background-blend-mode: lighten;
+    text-align: center;
+}
+
+.project-container h1 {
+    margin-top: 1rem;
+}
+
+.project-container .row {
+    display: flex;
+    justify-content: center;
+}
+
+.project-container-item .card {
+    margin: 1rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    width: 18rem;
+}
+
+.project-container-item .card-body a {
+    margin: 0.25rem;
+    border: 1px solid white;
+}
+
+.project-container-item .card-body a:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition: 0.5s ease;
+}
+
+.project-container-item .card-img-top {
+    filter: grayscale(100%);
+    width: 18rem;
+    height: 10rem;
+}
+
+.project-container-item .card-img-top:hover {
+    filter: grayscale(0%);
+    transition: 1s ease;
+}
+
+.project-container-item .card-title {
+    font-size: 1.2rem;
+}
+
+.card .card-body .project-badge {
+    color: black;
+    border: 1px solid black;
+}
+
+.project-container-item a {
+    background-color: black;
+    border: 1px solid white;
+    width: 7.2rem;
+    font-size: 0.8rem;
+}
