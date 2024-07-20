@@ -40,14 +40,14 @@ textType.prototype.tick = function () {
 };
 
 window.onload = function () {
-    
+
     var screenWidth = window.innerWidth;
-    var threshold = 1040;
+    var threshold = 1080;
 
     if (screenWidth < threshold) {
         window.location.href = 'https://linktr.ee/akshatsood.life';
     }
-    
+
     var elements = document.getElementsByClassName('typewrite');
     for (var i = 0; i < elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-type');
