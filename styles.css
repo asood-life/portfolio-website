@@ -60,6 +60,18 @@ body::-webkit-scrollbar {
     }
 }
 
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 #website-background {
     position: fixed;
     bottom: 0;
@@ -84,18 +96,6 @@ body::-webkit-scrollbar {
 
 .nav-item {
     color: black;
-}
-
-@keyframes slide-in {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .navbar-link {
@@ -224,10 +224,6 @@ body::-webkit-scrollbar {
 }
 
 /* Main Page Center Section CSS */
-
-/* .center-section-container {
-    animation: display-effect 3s ease-in;
-} */
 
 .center-section-name {
     font-size: 6.2rem;
