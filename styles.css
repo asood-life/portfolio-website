@@ -462,6 +462,7 @@ body::-webkit-scrollbar {
 
 .project-container-item .card-title {
     font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .card .card-body .project-badge {
