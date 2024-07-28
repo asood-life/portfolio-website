@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Roboto:wght@100;300;400&display=swap');
 
@@ -78,6 +78,7 @@ body::-webkit-scrollbar {
     animation: display-effect-bg 1.2s ease-in;
     opacity: 0.05;
     z-index: -1;
+    width: 100vw;
 }
 
 #nav-container {
@@ -146,7 +147,7 @@ body::-webkit-scrollbar {
 
 .about-me-container {
     height: 100%;
-    text-align: center;
+    /* text-align: center; */
 }
 
 /* Main Page Left Section CSS */
@@ -447,7 +448,7 @@ body::-webkit-scrollbar {
 
 .project-container-item .card-img-top {
     filter: grayscale(100%);
-    width: 18rem;
+    width: 17.88rem;
     height: 10rem;
 }
 
